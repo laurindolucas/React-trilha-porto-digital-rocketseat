@@ -92,11 +92,25 @@
                 </Text>
             )
         }
+
+        function Card({children, className, ...props}){
+            return(
+                <div className={`
+                    bg-(--background) shadow-(--shadow)
+                    rounded-2xl 
+                    ${className ? className : ''}   
+                `}>
+                    {children}
+                </div>
+            )
+        }
+
         function App() {
             return (
                 <main className="py-16 px-6">
-                    <Button>CE</Button>
-                    <Button variant="primary">CE</Button>
+                    <Card>
+                        Testando Card
+                    </Card>
                 </main>
             );
         }
