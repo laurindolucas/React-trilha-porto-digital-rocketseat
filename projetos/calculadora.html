@@ -39,7 +39,7 @@
     </style>
 </head>
 
-<body class="text-(--text) font-(--font-sans)">
+<body class="min-h-screen bg-linear-[180deg,_#807ECE_0%,_#8E7ECE_100%] text-(--text) font-(--font-sans) ">
     <div id="root"></div>
 
 
@@ -189,7 +189,12 @@
         }
         function App() {
             return (
-                <main className="py-16 px-6">
+                <main className={`
+                    py-28 px-4
+                    flex flex-col sm:flex-row
+                    items-center sm:items-stretch
+                    gap-2
+                    `}>
                  <Calculator />
                  <OperationHistory />
                 </main>
