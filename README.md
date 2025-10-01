@@ -14,10 +14,11 @@ Aprender e praticar **React**, consolidando conceitos por meio de:
 
 ---
 ## 📂 Estrutura do Repositório
-
-- `notas/` → Anotações teóricas sobre React e conceitos gerais
 - `exercicios/` → Exercícios realizados durante a trilha
+- `model/` → Modelos prontos de estruturas
+- `notas/` → Anotações teóricas sobre React e conceitos gerais
 - `projetos/` → Projetos completos:
+  - `calculadora/` → Simples projeto de calculadora (classico)
   - `todolist/` → Aplicativo de lista de tarefas
   - `galeria/` → Galeria de imagens usando React
 - `README.md` → Este arquivo com informações sobre o repositório
