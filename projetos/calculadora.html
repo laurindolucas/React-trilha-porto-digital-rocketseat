@@ -145,14 +145,14 @@
 
                     <Text as="div"
                         variant="muted"
-                        className="flex items-center justify-end">
-                        {operation}
+                        className="flex items-center justify-end h-7">
+                        {result && operation}
                     </Text>
                     <div className={`
-                  flex items-center justify-between
+                  flex items-center justify-between h-9
                 `}>
                         <Text variant="muted">=</Text>
-                        <Text variant="blast">{result}</Text>
+                        <Text variant="blast">{result || operation}</Text>
                     </div>
                 </div>
 
@@ -160,12 +160,33 @@
         }
 
         function Calculator() {
+            const [operation, setOperation] = React.useState('');
+            const [result, setResult] = React.useState('');
+
+            function handleInputClick(input){
+
+                if(input === "="){
+                    const operationResult = eval(operation.replace(/,/g, '.'));
+                    const parseResult = operationResult.toString()?.replace(/\./g, ',')
+                    setResult(parseResult);
+                    return;
+                }
+
+                if(input === "," && !operation.endsWith(',')){
+                    setOperation(`${operation},`)
+                    return;
+                }
+
+
+                setOperation(`${operation}${operation.endsWith(',') ? "" : " "}${input}`);
+            }
+
             return (
                 <Card className={`
                 flex flex-col gap-[1.625rem] w-[22.25rem]
                 pt-14 px-8 pb-8  
                 `}>
-                    <CalculatorDisplay operation=" 1 + 1" result="2" />
+                    <CalculatorDisplay operation={operation} result={result} />
 
                     <div className="flex flex-col gap-3">
                         {buttons.map((row, index) => (
@@ -173,7 +194,8 @@
                                 {row.map(button =>
                                 (<Button key={button.input}
                                     className={button.className || "w-16 h-16"}
-                                    variant={button.variant}>
+                                    variant={button.variant}
+                                    onClick={() => handleInputClick(button.input)}>
                                     {button.input}
                                 </Button>))}
 
