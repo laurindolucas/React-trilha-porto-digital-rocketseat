@@ -2,6 +2,7 @@ import Text from "./components/text";
 import Icon from "./components/icon"
 import Badge from "./components/badge";
 import Button from "./components/button";
+import ButtonIcon from "./components/button-icon";
 
 import TrashIcon from "./assets/icons/Trash-Regular.svg?react";
 import CheckIcon from "./assets/icons/Check-Regular.svg?react"
@@ -36,6 +37,12 @@ export default function App() {
 
       <div>
         <Button icon={PlusIcon}>Nova Tarefa</Button>
+      </div>
+
+      <div className="flex gap-1">
+        <ButtonIcon icon={TrashIcon} disabled />
+        <ButtonIcon icon={TrashIcon} variant="secondary" />
+        <ButtonIcon icon={TrashIcon} variant="tertiary" />
       </div>
 
      
