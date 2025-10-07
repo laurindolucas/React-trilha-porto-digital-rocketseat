@@ -5,6 +5,8 @@ import Button from "./components/button";
 import ButtonIcon from "./components/button-icon";
 import InputText from "./components/input-text";
 import InputCheckbox from "./components/input-checkbox";
+import Card from "./components/card";
+
 
 import TrashIcon from "./assets/icons/Trash-Regular.svg?react";
 import CheckIcon from "./assets/icons/Check-Regular.svg?react"
@@ -51,6 +53,9 @@ export default function App() {
       </div>
         <div>
         <InputCheckbox />
+      </div>
+      <div>
+        <Card size="md">Olá mundo</Card>
       </div>
 
      
