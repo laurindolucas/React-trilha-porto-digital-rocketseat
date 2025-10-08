@@ -36,9 +36,9 @@ export default function App() {
           <Icon svg={XIcon} />
         </div>
 
-        <div>
+        <div className="flex gap-1">
           <Badge variant="secondary">5</Badge>
-          <Badge variant="primary">2 de 5</Badge>
+          <Badge loading>2 de 5</Badge>
         </div>
 
         <div>
@@ -48,13 +48,14 @@ export default function App() {
         <div className="flex gap-1">
           <ButtonIcon icon={TrashIcon} disabled />
           <ButtonIcon icon={TrashIcon} variant="secondary" />
-          <ButtonIcon icon={TrashIcon} variant="tertiary" />
+          <ButtonIcon icon={TrashIcon} variant="tertiary" loading />
         </div>
         <div>
-          <InputText />
+          <InputText /> 
+        
         </div>
         <div>
-          <InputCheckbox />
+          <InputCheckbox loading />
         </div>
         <div>
           <Card size="md">Olá mundo</Card>
