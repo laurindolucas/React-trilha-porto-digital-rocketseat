@@ -2,7 +2,6 @@
 import Icon from "./icon";
 import Text from "./text";
 import { cva, type VariantProps } from "class-variance-authority";
-
 export const buttonVariants = cva(`flex items-center justify-center cursor-pointer transition rounded-lg gap-2`, {
     variants: {
         variant: {
