@@ -7,7 +7,7 @@ export const inputCheckboxWrapperVariants = cva(` inline-flex items-center justi
 
 export const inputCheckboxVariants = cva(`
     appearance-none peer flex items-center justify-center cursor-pointer
-  transition overflow-hidden border-green-base
+  transition overflow-hidden border-sky-base
  
     `,
   {
@@ -15,9 +15,9 @@ export const inputCheckboxVariants = cva(`
       variant: {
         none: " ",
         default: ` border-2 border-solid
-             hover:border-green-dark hover:bg-green-dark/20
-             checked:border-green-base checked:bg-green-base
-             group-hover:checked:border-green-dark group-hover:checked:bg-green-dark
+             hover:border-sky-dark hover:bg-sky-dark/20
+             checked:border-sky-base checked:bg-sky-base
+             group-hover:checked:border-sky-dark group-hover:checked:bg-sky-dark
            `
       },
       size: {
@@ -39,7 +39,7 @@ export const inputCheckboxVariants = cva(`
 export const inputCheckboxIconVariants = cva(
   `
     absolute top-1/2 left-1 -translate-y-1/2
-    hidden peer-checked:block fill-white
+    hidden peer-checked:block fill-black
   `,
   {
     variants: {

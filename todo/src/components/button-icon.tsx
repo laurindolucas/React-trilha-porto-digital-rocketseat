@@ -9,7 +9,7 @@ export const buttonIconVariants = cva(
     variants: {
       variant: {
         none: "",
-        primary: "bg-green-base hover:bg-green-dark",
+        primary: "bg-sky-base hover:bg-sky-dark",
         secondary: "bg-gray-200 hover:bg-pink-base",
         tertiary: "bg-transparent hover:bg-gray-200",
       },
@@ -40,7 +40,7 @@ export const buttonIconIconVariants = cva("transition", {
     variant: {
       none: "",
       primary: "fill-white",
-      secondary: "fill-pink-base group-hover:fill-white",
+      secondary: "fill-blue-dark group-hover:fill-white",
       tertiary: "fill-gray-300 group-hover:fill-gray-400",
     },
     size: {

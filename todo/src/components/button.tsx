@@ -6,7 +6,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 export const buttonVariants = cva(`flex items-center justify-center cursor-pointer transition rounded-lg gap-2`, {
     variants: {
         variant: {
-            primary: " bg-gray-200 hover:bg-pink-light"
+            primary: " bg-gray-200 hover:bg-blue-light"
         },
         size: {
             md: "h-14 py-4 px-5"
@@ -25,7 +25,7 @@ export const buttonVariants = cva(`flex items-center justify-center cursor-point
 export const buttonIconVariants = cva("transition", {
     variants: {
         variant: {
-            primary: "fill-pink-base"
+            primary: "fill-blue-base"
         }, size: {
             md: "w-5 h-5"
         }
