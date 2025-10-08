@@ -1,4 +1,5 @@
 import Container from "../components/container";
+import TaskItem from "../core-components/task-item";
 import TasksSummary from "../core-components/tasks-summary";
 
  
@@ -9,6 +10,7 @@ import TasksSummary from "../core-components/tasks-summary";
             <header className="flex items-center justify-between">
                 <TasksSummary />
             </header>
+            <TaskItem/>
 
         </Container>
     )
