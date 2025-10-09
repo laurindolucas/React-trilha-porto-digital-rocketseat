@@ -1,0 +1,24 @@
+{
+  "users": [
+    {
+      "id": "gus",
+      "name": "Gustavo"
+    },
+    {
+      "id": "hele",
+      "name": "Helena"
+    },
+    {
+      "id": "parzival",
+      "name": "caio "
+    },
+    {
+      "id": "dvini",
+      "name": "vinicius"
+    },
+    {
+      "id": "crisbom",
+      "name": "Cristiano"
+    }
+  ]
+}
