@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rocketseat- react- fundamentos</title>
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+
+    <script type="text/babel">
+        function Calc() {
+            const [firstValue, setFirstValue] = React.useState(1)
+            const [secondValue, setSecondValue] = React.useState(1)
+
+            const resultado = React.useMemo(() => {
+                console.log(`Calculando... ${firstValue} + ${secondValue}`)
+                return firstValue + secondValue
+            }, [firstValue, secondValue]);
+
+            return (
+                <div className="space-y-2">
+                    <div className="space-x-2">
+                        <input
+                            type="number"
+                            className="border"
+                            value={firstValue}
+                            onChange={e => setFirstValue(parseInt(e.target.value))}
+                        />
+                        <input
+                            type="number"
+                            className="border"
+                            value={secondValue}
+                            onChange={e => setSecondValue(parseInt(e.target.value))}
+                        />
+                    </div>
+                    <div className="space-x-2">
+                        <button
+                            onClick={() => {
+                                console.log('setando primeiro valor como 1');
+                                setFirstValue(1)
+                            }}
+                            className="border"
+                        >
+                            Setar primeiro valor como 1
+                        </button>
+                        <button
+                            onClick={() => {
+                                console.log('setando segundo valor como 1');
+                                setSecondValue(1)
+                            }}
+                            className="border"
+                        >
+                            Setar segundo valor como 1
+                        </button>
+                    </div>
+                    <div className="space-x-2">
+                        <button
+                            onClick={() => {
+                                console.log('setando primeiro valor como 2');
+                                setFirstValue(2)
+                            }}
+                            className="border"
+                        >
+                            Setar primeiro valor como 2
+                        </button>
+                        <button
+                            onClick={() => {
+                                console.log('setando segundo valor como 2');
+                                setSecondValue(2)
+                            }}
+                            className="border"
+                        >
+                            Setar segundo valor como 1
+                        </button>
+                    </div>
+                    <p>Resultado: {resultado}</p>
+                </div>
+            )
+        }
+
+        function App() {
+            return (
+                <main>
+                    <Calc />
+                </main>
+            )
+        }
+
+        ReactDOM.createRoot(document.getElementById('root')).render(<App />)
+
+    </script>
+</body>
+
+</html>
